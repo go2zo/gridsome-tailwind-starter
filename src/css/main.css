@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+
+@import "./theme-pink.css";
+
+:root {
+  --mainColor: red;
+}
+
+button {
+  & a {
+      color: var(--mainColor)
+  }
+
+  @nest &.custom {
+      background-color: pink
+  }
+}
+
+@tailwind utilities;
