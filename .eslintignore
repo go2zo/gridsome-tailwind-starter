@@ -1,0 +1,6 @@
+node_modules
+dist
+gridsome.config.js
+gridsome.server.js
+
+!.eslintrc.js
