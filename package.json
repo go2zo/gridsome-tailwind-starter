@@ -10,7 +10,9 @@
     "deploy": "gridsome build && gh-pages -d dist"
   },
   "dependencies": {
-    "gridsome": "^0.7.0"
+    "@gridsome/source-filesystem": "^0.6.2",
+    "gridsome": "^0.7.0",
+    "vue-feather-icons": "^5.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.3",
@@ -18,6 +20,7 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-node": "^0.3.4",
     "eslint-plugin-gridsome": "^1.6.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
@@ -26,9 +29,16 @@
     "gridsome-plugin-tailwindcss": "^4.1.0",
     "husky": "^5.1.3",
     "lint-staged": "^10.5.4",
+    "node-sass": "^5.0.0",
     "prettier": "^2.2.1",
+    "sass-loader": "^10.1.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-scss": "^3.19.0",
+    "svg-to-vue-component": "^0.3.8",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "vue-eslint-parser": "^7.6.0"
+    "vue-eslint-parser": "^7.6.0",
+    "webpack-node-externals": "^2.5.2"
   },
   "husky": {
     "hooks": {

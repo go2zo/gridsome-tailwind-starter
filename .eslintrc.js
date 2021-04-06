@@ -6,6 +6,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es2021: true,
   },
   plugins: ['gridsome', 'prettier', 'import'],
   extends: [
@@ -18,14 +19,20 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-underscore-dangle': 'off',
+    'no-unused-vars': 'off',
     'vue/html-indent': ['error', 2],
     'vue/no-v-html': 'off',
+    'import/extensions': ['error', 'never', { svg: 'always' }],
+    'import/no-unresolved': 'off',
   },
   settings: {
     'import/resolver': {
       alias: {
-        map: [['^~', path.resolve(__dirname, './src')]],
-        extensions: ['.js', '.vue'],
+        map: [
+          ['^~', path.resolve(__dirname, './src')],
+          ['@', path.resolve(__dirname, './src')],
+        ],
+        extensions: ['.{j,t}s?(x)', '.vue'],
       },
     },
   },
@@ -35,6 +42,7 @@ module.exports = {
       rules: {
         'func-names': ['off'],
         'no-unused-vars': ['error', { args: 'none' }],
+        'import/extensions': 'off',
       },
     },
     {
@@ -45,6 +53,9 @@ module.exports = {
       env: {
         jest: true,
       },
+    },
+    {
+      files: ['**/*.{j,t}s?(x)', '**/*.vue'],
     },
   ],
 }

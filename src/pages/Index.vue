@@ -1,8 +1,5 @@
 <template>
   <Layout>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
     <h1>Hello, world!</h1>
 
     <p>
@@ -23,23 +20,6 @@
         GitHub
       </a>
     </p>
-
-    <button
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-    >
-      Button1
-    </button>
-    <button class="custom font-bold py-2 px-4 rounded"><a>Button2</a></button>
-
-    <pre>
-      <code>
-        if (x==1) {
-          print("Hello")
-        }
-      </code>
-    </pre>
-
-    <p class="subtitle">This gray text is semibold and uppercase</p>
   </Layout>
 </template>
 
