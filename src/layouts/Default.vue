@@ -1,5 +1,5 @@
 <template>
-  <div id="flex">
+  <div id="app" dark>
     <Header />
     <slot />
   </div>

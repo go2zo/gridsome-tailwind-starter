@@ -7,7 +7,7 @@ nav a {
   }
 
   svg {
-    @apply mx-1.5 my-0.5;
+    @apply w-5 h-5 mx-1.5 my-0.5;
   }
 
   &:not(.active):not(:hover):not(.button) {

@@ -10,11 +10,13 @@
     "deploy": "gridsome build && gh-pages -d dist"
   },
   "dependencies": {
-    "@gridsome/source-filesystem": "^0.6.2",
     "gridsome": "^0.7.0",
     "vue-feather-icons": "^5.1.0"
   },
   "devDependencies": {
+    "@gridsome/remark-prismjs": "^0.5.0",
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -26,6 +28,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.7.0",
     "gh-pages": "^3.1.0",
+    "gridsome-plugin-extract-schema": "^1.1.1",
     "gridsome-plugin-tailwindcss": "^4.1.0",
     "husky": "^5.1.3",
     "lint-staged": "^10.5.4",

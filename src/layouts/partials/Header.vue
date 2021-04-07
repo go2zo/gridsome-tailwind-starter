@@ -14,6 +14,7 @@
           title="go2zo @ github"
         >
           <GithubIcon />
+          <!-- <GithubLogo /> -->
         </a>
       </nav>
     </div>
@@ -23,6 +24,7 @@
 <script>
 import SearchForm from '@/components/SearchForm'
 import ToggleTheme from '@/components/ToggleTheme'
+// import GithubLogo from '@/assets/images/github-logo.svg'
 import { GithubIcon } from 'vue-feather-icons'
 import Nav from './Nav'
 import Logo from './Logo'
@@ -33,6 +35,7 @@ export default {
     Nav,
     SearchForm,
     ToggleTheme,
+    // GithubLogo,
     GithubIcon,
   },
 }
@@ -51,7 +54,7 @@ header {
   }
 
   .header-inner {
-    @apply px-6 py-0 items-center h-12;
+    @apply px-x1 py-0 items-center h-12;
     min-height: 58px;
   }
 

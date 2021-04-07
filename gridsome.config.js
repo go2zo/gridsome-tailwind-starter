@@ -7,7 +7,8 @@
 const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
-  siteName: 'Gridsome starter with TailwindCSS',
+  siteName: 'BlogStarter',
+  siteDescription: 'Gridsome starter with TailwindCSS',
 
   chainWebpack: (config, { isServer }) => {
     config.module.rules.delete('svg')
@@ -37,12 +38,25 @@ module.exports = {
   },
   plugins: [
     {
+      use: "gridsome-plugin-extract-schema",
+      options: {
+        dest: `${__dirname}/src/.temp/schema.json` // Default
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
-        path: '/content/blog/*/index.*',
+        path: './content/blog/*/index.*',
         refs: {
-
+          author: {
+            typeName: 'Author',
+            create: true,
+          },
+          tags: {
+            typeName: 'Tag',
+            create: true,
+          }
         }
       }
     },
@@ -50,4 +64,11 @@ module.exports = {
       use: 'gridsome-plugin-tailwindcss',
     },
   ],
+  transformers: {
+    remark: {
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  }
 }

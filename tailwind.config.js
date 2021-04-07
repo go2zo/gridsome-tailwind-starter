@@ -41,7 +41,9 @@ module.exports = {
         85: '.85',
       },
       spacing: {
-        50: '200px',
+        50: '12.5em'/* 200px */,
+        x1: 'var(--space)',
+        x2: 'var(--space-x2)',
       },
       backgroundColor: (theme) => ({
         DEFAULT: 'var(--bg)',

@@ -1,0 +1,10 @@
+{
+  "schemaPath": "src/.temp/schema.json",
+  "extensions": {
+    "endpoints": {
+      "dev": {
+        "url": "http://localhost:8080/___graphql"
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<template>
+  <Layout>
+    <div class="container text-center mb-x2">
+      <h1>Blog</h1>
+      <p class="opacity-80">"Simple is best."</p>
+    </div>
+    <PostCard
+      v-for="edge in $page.posts.edges"
+      :key="edge.node.id"
+      :post="edge.node"
+    />
+  </Layout>
+</template>
+
+<page-query>
+query {
+  posts: allBlogPost {
+    edges {
+      node {
+        id
+        title
+        path
+        date(format: "D. MMMM YYYY")
+        timeToRead
+        author {
+          id
+          title
+        }
+        tags {
+          id
+          title
+        }
+        excerpt
+        content
+      }
+    }
+  }
+}
+</page-query>
+
+<script>
+import PostCard from '@/components/PostCard'
+
+export default {
+  components: {
+    PostCard,
+  },
+  metaInfo: {
+    title: 'About us',
+  },
+}
+</script>
