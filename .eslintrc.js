@@ -20,6 +20,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-underscore-dangle': 'off',
     'no-unused-vars': 'off',
+    'no-param-reassign': ['error', { props: false }],
     'vue/html-indent': ['error', 2],
     'vue/no-v-html': 'off',
     'import/extensions': ['error', 'never', { svg: 'always' }],
