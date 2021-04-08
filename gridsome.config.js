@@ -57,7 +57,7 @@ module.exports = {
             typeName: 'Tag',
             create: true,
           }
-        }
+        },
       }
     },
     {

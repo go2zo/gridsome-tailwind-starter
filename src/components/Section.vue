@@ -30,7 +30,7 @@ export default {
     sectionClassInner() {
       const classes = []
       if (this.framed) classes.push('container--framed')
-      if (this.container) classes.push('container-' + this.container)
+      if (this.container) classes.push(`container-${this.container}`)
       return classes
     },
   },
@@ -63,7 +63,11 @@ export default {
       @apply text-current;
     }
 
-    h1, h2, h3, h4, a {
+    h1,
+    h2,
+    h3,
+    h4,
+    a {
       @apply text-white;
     }
   }

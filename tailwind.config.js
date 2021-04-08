@@ -1,3 +1,5 @@
+const textIndent = require('tailwindcss-text-indent')
+
 module.exports = {
   purge: [
     './src/**/*.vue',
@@ -36,8 +38,8 @@ module.exports = {
     }),
     extend: {
       screens: {
-        'mobile': '550px',
-        'tablet': '850px',
+        mobile: '550px',
+        tablet: '850px',
       },
       colors: {
         body: 'var(--body-color)',
@@ -59,15 +61,20 @@ module.exports = {
       },
       boxShadow: {
         inner: 'inset 0 0 0 2px var(--primary-color)',
+        glow: 'var(--glow)',
       },
       outline: {
         0: '0',
+        DEFAULT: '2px auto -webkit-focus-ring-color',
       },
       transitionDuration: {
         600: '600ms',
       },
       opacity: {
         85: '.85',
+      },
+      zIndex: {
+        1: '1',
       },
       spacing: (theme) => ({
         ...theme('extraSpacing'),
@@ -98,7 +105,5 @@ module.exports = {
   variants: {
     textIndent: ['responsive'],
   },
-  plugins: [
-    require('tailwindcss-text-indent')(),
-  ],
+  plugins: [textIndent()],
 }

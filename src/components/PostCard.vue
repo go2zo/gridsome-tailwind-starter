@@ -1,5 +1,5 @@
 <template>
-  <Card :link="post.path">
+  <Card class="blog-posts__post" :link="post.path">
     <h3 v-html="post.title" />
     <p v-html="post.excerpt" />
     <PostMeta :post="post" />
@@ -20,3 +20,15 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.blog-posts {
+  &__post {
+    @apply relative mb-8;
+
+    .card__inner {
+      @apply p-x2;
+    }
+  }
+}
+</style>

@@ -35,22 +35,72 @@ export default {
 
 <style lang="scss">
 .card {
-  &--has-link {
-  }
-
-  &__link {
-  }
+  @apply border border-darker rounded;
+  @apply bg relative;
+  @apply transition-all duration-300;
+  z-index: 1;
 
   &__title {
+    @apply text-center w-full mt-4;
+
+    span {
+      @apply inline-block;
+      @apply pt-0.5 pb-1 px-3;
+      @apply bg-dark;
+      @apply text-white font-medium text-base tracking-wide;
+      border-radius: 3px;
+    }
   }
 
   &__image {
+    @apply rounded-tl rounded-tr rounded-br-none rounded-bl-none;
+    @apply overflow-hidden;
+    @apply border-b border-primary;
+    @apply transition-colors duration-300;
+
+    img {
+      @apply m-0 w-full;
+    }
   }
 
   &__inner {
+    @apply p-x1 overflow-hidden relative;
   }
 
-  &__outer {
+  &[class*='container'] &__inner {
+    @apply px-0;
+  }
+
+  .section--dark & {
+    @apply bg-dark border-white opacity-10;
+  }
+
+  &__link {
+    @apply absolute top-0 left-0 w-full h-full opacity-0 z-1;
+    @apply overflow-hidden indent-full whitespace-nowrap; /** Scott Kellum Method */
+    // @apply sr-only; /** H5BP */
+
+    &:focus {
+      @apply opacity-100 outline;
+    }
+  }
+
+  a:not(.card__link) {
+    @apply relative z-1;
+  }
+
+  &--has-link:hover {
+    @apply shadow-glow text-current transform -translate-y-1;
+  }
+
+  h2,
+  h3,
+  h4 {
+    @apply mb-2;
+  }
+
+  p:not(:last-child) {
+    @apply mb-5;
   }
 }
 </style>
