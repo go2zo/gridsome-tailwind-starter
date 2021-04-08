@@ -30,6 +30,10 @@ module.exports = {
       x2: 'var(--space-x2)',
     },
     extend: {
+      screens: {
+        'mobile': '550px',
+        'tablet': '850px',
+      },
       colors: {
         body: 'var(--body-color)',
         primary: 'var(--primary-color)',
