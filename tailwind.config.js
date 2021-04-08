@@ -29,6 +29,11 @@ module.exports = {
       x1: 'var(--space)',
       x2: 'var(--space-x2)',
     },
+    textIndent: (theme, { negative }) => ({
+      ...theme('spacing'),
+      ...negative(theme('spacing')),
+      full: '100%',
+    }),
     extend: {
       screens: {
         'mobile': '550px',
@@ -86,10 +91,14 @@ module.exports = {
       }),
       borderColor: (theme) => ({
         primary: 'var(--border-color)',
-        dark: 'var(--border-color-darker)',
+        darker: 'var(--border-color-darker)',
       }),
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    textIndent: ['responsive'],
+  },
+  plugins: [
+    require('tailwindcss-text-indent')(),
+  ],
 }
