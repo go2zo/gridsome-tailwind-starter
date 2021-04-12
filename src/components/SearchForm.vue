@@ -42,14 +42,15 @@ export default {
 
 <style lang="scss">
 .header-search {
-  @apply block;
+  @apply block mb-0 text-sm flex-1 w-full;
+  @apply my-0 mr-1 -ml-3 sm:mx-inherit sm:mt-inherit sm:mb-0;
 
   label {
     @apply flex items-center;
   }
 
   .search-icon {
-    @apply -ml-8;
+    @apply -ml-8 w-4 pointer-events-none opacity-60;
   }
 }
 </style>

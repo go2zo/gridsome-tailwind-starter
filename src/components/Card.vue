@@ -35,28 +35,21 @@ export default {
 
 <style lang="scss">
 .card {
-  @apply border border-darker rounded;
-  @apply bg relative;
-  @apply transition-all duration-300;
-  z-index: 1;
+  @apply border border-darker rounded bg relative;
+  @apply transition duration-300 z-1;
 
   &__title {
-    @apply text-center w-full mt-4;
+    @apply text-center w-full -mt-4;
 
     span {
-      @apply inline-block;
-      @apply pt-0.5 pb-1 px-3;
-      @apply bg-dark;
-      @apply text-white font-medium text-base tracking-wide;
-      border-radius: 3px;
+      @apply inline-block px-3 pt-0.5 pb-1 bg-dark;
+      @apply text-white font-medium text-base tracking-wide rounded;
     }
   }
 
   &__image {
-    @apply rounded-tl rounded-tr rounded-br-none rounded-bl-none;
-    @apply overflow-hidden;
-    @apply border-b border-primary;
-    @apply transition-colors duration-300;
+    @apply rounded-t rounded-b-none border-b border-primary;
+    @apply overflow-hidden transition-colors duration-300;
 
     img {
       @apply m-0 w-full;
@@ -78,11 +71,7 @@ export default {
   &__link {
     @apply absolute top-0 left-0 w-full h-full opacity-0 z-1;
     @apply overflow-hidden indent-full whitespace-nowrap; /** Scott Kellum Method */
-    // @apply sr-only; /** H5BP */
-
-    &:focus {
-      @apply opacity-100 outline;
-    }
+    @apply focus:opacity-100 focus:outline;
   }
 
   a:not(.card__link) {

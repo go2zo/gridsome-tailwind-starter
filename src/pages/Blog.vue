@@ -3,7 +3,7 @@
     <Section container="md" class="blog-posts">
       <div class="text-center container-sm mb-x2">
         <h1>Blog</h1>
-        <p class="opacity-80">"Simple is best."</p>
+        <p class="opacity-80">"Simple is best, less is more."</p>
       </div>
       <PostCard
         v-for="edge in $page.posts.edges"

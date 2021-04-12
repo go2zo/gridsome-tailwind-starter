@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "gridsome": "^0.7.0",
+    "typography": "^0.16.19",
     "vue-feather-icons": "^5.1.0"
   },
   "devDependencies": {

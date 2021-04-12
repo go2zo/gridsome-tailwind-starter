@@ -1,5 +1,3 @@
-const textIndent = require('tailwindcss-text-indent')
-
 module.exports = {
   purge: [
     './src/**/*.vue',
@@ -30,6 +28,7 @@ module.exports = {
       400: '100em/* 1600px */',
       x1: 'var(--space)',
       x2: 'var(--space-x2)',
+      inherit: 'inherit',
     },
     textIndent: (theme, { negative }) => ({
       ...theme('spacing'),
@@ -105,5 +104,7 @@ module.exports = {
   variants: {
     textIndent: ['responsive'],
   },
-  plugins: [textIndent()],
+  plugins: [
+    require('tailwindcss-text-indent')()
+  ],
 }
