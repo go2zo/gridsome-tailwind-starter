@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   purge: [
     './src/**/*.vue',
@@ -48,6 +50,7 @@ module.exports = {
         inline: 'var(--inline-code-text)',
         mark: 'var(--mark-color)',
         code: 'var(--code-color)',
+        line: 'var(--border-color)',
       },
       keyframes: {
         target: {
@@ -75,6 +78,9 @@ module.exports = {
       zIndex: {
         1: '1',
       },
+      transitionProperty: {
+        'text-decoration': 'text-decoration',
+      },
       spacing: (theme) => ({
         ...theme('extraSpacing'),
       }),
@@ -93,7 +99,6 @@ module.exports = {
         code: 'var(--code-bg)',
         inline: 'var(--inline-code-bg)',
         success: 'var(--success-bg)',
-        line: 'var(--border-color)',
       }),
       borderColor: (theme) => ({
         primary: 'var(--border-color)',
@@ -105,6 +110,10 @@ module.exports = {
     textIndent: ['responsive'],
   },
   plugins: [
-    require('tailwindcss-text-indent')()
+    require('tailwindcss-text-indent')(),
+    require('./plugins/decoration-color')
+    // plugin(({ addUtilities, theme, e}) => {
+
+    // })
   ],
 }
