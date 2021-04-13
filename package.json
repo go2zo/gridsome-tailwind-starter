@@ -1,6 +1,15 @@
 {
   "name": "gridsome-tailwind-starter",
   "private": true,
+  "author": {
+    "name": "go2zo",
+    "email": "go2zo.ooo@gmainl.com",
+    "url": "http://go2zo.github.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/go2zo/gridsome-tailwind-starter/"
+  },
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",

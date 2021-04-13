@@ -9,7 +9,7 @@
         <ToggleTheme />
         <a
           aria-label="Github"
-          href="//github.com/go2zo/go2zo.github.io"
+          :href="$static.metadata.repository.url"
           target="_blank"
           title="go2zo @ github"
         >
@@ -20,6 +20,16 @@
     </div>
   </header>
 </template>
+
+<static-query>
+query {
+  metadata {
+    repository {
+      url
+    }
+  }
+}
+</static-query>
 
 <script>
 import SearchForm from '@/components/SearchForm'

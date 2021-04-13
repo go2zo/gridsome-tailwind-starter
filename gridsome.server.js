@@ -6,8 +6,14 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
+  api.loadSource(async ({ addMetadata, addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+    const package = require('./package.json')
+    const author = package.author
+    const repository = package.repository
+
+    addMetadata('author', author)
+    addMetadata('repository', repository)
   })
 
   api.createPages(({ createPage }) => {
