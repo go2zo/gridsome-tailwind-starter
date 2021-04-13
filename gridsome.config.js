@@ -9,7 +9,10 @@ const nodeExternals = require('webpack-node-externals')
 module.exports = {
   siteName: 'BlogStarter',
   siteDescription: 'Gridsome starter with TailwindCSS',
-
+  icon: {
+    favicon: 'src/assets/favicon.png',
+    touhicon: 'src/assets/favicon.png',
+  },
   chainWebpack: (config, { isServer }) => {
     config.module.rules.delete('svg')
     config.module.rule('svg')
