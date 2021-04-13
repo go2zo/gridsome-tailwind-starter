@@ -2,6 +2,7 @@
   <div id="app" dark>
     <Header />
     <slot />
+    <Footer />
   </div>
 </template>
 
@@ -15,13 +16,16 @@ query {
 
 <script>
 import Header from './partials/Header'
+import Footer from './partials/Footer'
 
 export default {
   components: {
     Header,
+    Footer,
   },
 }
 </script>
+
 <style>
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
