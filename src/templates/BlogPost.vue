@@ -1,11 +1,13 @@
 <template>
   <Layout>
-    <div class="post-header">
-      <h1 v-html="$page.post.title" />
-    </div>
-    <div class="post-content">
-      <div v-html="$page.post.content" />
-    </div>
+    <Section container="md" dots="true">
+      <div class="post-header">
+        <h1 v-html="$page.post.title" />
+      </div>
+      <div class="post-content">
+        <div v-html="$page.post.content" />
+      </div>
+    </Section>
   </Layout>
 </template>
 
