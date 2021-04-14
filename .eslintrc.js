@@ -8,7 +8,7 @@ module.exports = {
     node: true,
     es2021: true,
   },
-  plugins: ['gridsome', 'prettier', 'import'],
+  plugins: ['import'],
   extends: [
     'airbnb-base',
     'plugin:gridsome/recommended',
