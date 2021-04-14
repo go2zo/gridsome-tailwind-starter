@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Section container="md" dots="true">
+    <Section container="md" dots>
       <div class="post-header">
         <h1 v-html="$page.post.title" />
       </div>

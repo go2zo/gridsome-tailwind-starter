@@ -78,6 +78,10 @@ module.exports = {
       zIndex: {
         1: '1',
       },
+      letterSpacing: {
+        'little-tight': '-0.15px',
+        'little-wide': '0.15px'
+      },
       transitionProperty: {
         'text-decoration': 'text-decoration',
       },

@@ -4,6 +4,7 @@
 import '~/assets/style/index.scss'
 
 import Typography from 'typography'
+import CodePlugin from 'typography-plugin-code'
 import DefaultLayout from '~/layouts/Default'
 import Section from '~/components/Section'
 
@@ -29,6 +30,7 @@ const typography = new Typography({
     'Arial',
     'sans-serif',
   ],
+  plugins: [new CodePlugin()],
 })
 
 export default function (Vue, { router, head, isClient }) {
