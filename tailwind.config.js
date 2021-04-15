@@ -115,9 +115,7 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-text-indent')(),
-    require('./plugins/decoration-color')
-    // plugin(({ addUtilities, theme, e}) => {
-
-    // })
+    require('./plugins/decoration-color'),
+    require('./plugins/font-variant')
   ],
 }
