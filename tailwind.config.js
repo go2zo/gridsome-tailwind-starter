@@ -31,6 +31,8 @@ module.exports = {
       x1: 'var(--space)',
       x2: 'var(--space-x2)',
       inherit: 'inherit',
+      '110%': '110%',
+      '5%': '5%',
     },
     textIndent: (theme, { negative }) => ({
       ...theme('spacing'),
@@ -116,6 +118,7 @@ module.exports = {
   plugins: [
     require('tailwindcss-text-indent')(),
     require('./plugins/decoration-color'),
-    require('./plugins/font-variant')
+    require('./plugins/font-variant'),
+    require('./plugins/word-spacing')
   ],
 }
