@@ -1,10 +1,10 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
+import 'prism-themes/themes/prism-vsc-dark-plus.css'
 import '~/assets/style/index.scss'
 
 import Typography from 'typography'
-import CodePlugin from 'typography-plugin-code'
 import DefaultLayout from '~/layouts/Default'
 import Section from '~/components/Section'
 
@@ -30,7 +30,6 @@ const typography = new Typography({
     'Arial',
     'sans-serif',
   ],
-  plugins: [new CodePlugin()],
 })
 
 export default function (Vue, { router, head, isClient }) {
