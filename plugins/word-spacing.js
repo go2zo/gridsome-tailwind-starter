@@ -7,8 +7,8 @@ module.exports = plugin(({ addUtilities, theme, e, variants }) => {
 
   const wordSpacingUtilities = _.map(letterSpacing, (scale, name) => ({
     [`.word-spacing-${e(name)}`]: {
-      wordSpacing: `${scale}`
-    }
+      wordSpacing: `${scale}`,
+    },
   }))
 
   addUtilities(wordSpacingUtilities, wordSpacingVariants)

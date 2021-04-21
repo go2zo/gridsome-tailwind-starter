@@ -5,22 +5,22 @@ module.exports = plugin(({ addUtilities, theme, e, variants }) => {
 
   const fontVariantUtilities = [
     {
-      ['.smallcaps']: { fontVariantCaps: 'small-caps' }
+      '.smallcaps': { fontVariantCaps: 'small-caps' },
     },
     {
-      ['.allsmallcaps']: { fontVariantCaps: 'all-small-caps' }
+      '.allsmallcaps': { fontVariantCaps: 'all-small-caps' },
     },
     {
-      ['.nicezero']: { fontVariantNumeric: 'slashed-zero' }
+      '.nicezero': { fontVariantNumeric: 'slashed-zero' },
     },
     {
-      ['.hist']: { fontVariantLigatures: 'historical-ligatures' }
+      '.hist': { fontVariantLigatures: 'historical-ligatures' },
     },
     {
-      ['.noligs']: { fontVariantLigatures: 'no-common-ligatures' }
+      '.noligs': { fontVariantLigatures: 'no-common-ligatures' },
     },
     {
-      ['.tabular']: { fontVariantNumeric: 'tabular-nums' }
+      '.tabular': { fontVariantNumeric: 'tabular-nums' },
     },
   ]
 
