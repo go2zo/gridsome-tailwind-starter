@@ -22,11 +22,12 @@ query {
         id
         title
         path
-        date(format: "D. MMMM YYYY")
+        date(format: "D. MMM YYYY")
         timeToRead
         author {
           id
           title
+          path
         }
         tags {
           id

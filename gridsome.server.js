@@ -9,8 +9,15 @@ module.exports = function (api) {
   api.loadSource(async ({ addMetadata, addCollection }) => {
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
     const package = require('./package.json')
-    const author = package.author
     const repository = package.repository
+    const author = {
+      id: 'go2zo',
+      title: 'Go2zo',
+      path: '/about'
+    }
+
+    const authors = addCollection('Author')
+    authors.addNode(author)
 
     addMetadata('author', author)
     addMetadata('repository', repository)

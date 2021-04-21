@@ -15,12 +15,14 @@
             :alt="author.title"
             :src="author.avatar"
           />
-          <g-link v-if="author.path" :key="author.id" :to="autho.path">{{
+          <g-link v-if="author.path" :key="author.id" :to="author.path">{{
             author.title
           }}</g-link>
+          <span v-else :key="author.id">{{author.title}}</span>
         </template>
       </template>
       <template v-if="post.timeToRead">
+        <span> – </span>
         <strong>{{ post.timeToRead }} min read</strong>
       </template>
     </small>

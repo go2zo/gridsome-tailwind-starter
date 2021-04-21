@@ -52,10 +52,7 @@ module.exports = {
         typeName: 'BlogPost',
         path: './content/blog/*/index.*',
         refs: {
-          author: {
-            typeName: 'Author',
-            create: true,
-          },
+          author: 'Author',
           tags: {
             typeName: 'Tag',
             create: true,
