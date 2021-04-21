@@ -34,6 +34,6 @@ import PostMeta from '@/components/PostMeta'
 export default {
   components: {
     PostMeta,
-  }
+  },
 }
 </script>

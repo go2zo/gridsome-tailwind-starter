@@ -18,7 +18,7 @@
           <g-link v-if="author.path" :key="author.id" :to="author.path">{{
             author.title
           }}</g-link>
-          <span v-else :key="author.id">{{author.title}}</span>
+          <span v-else :key="author.id">{{ author.title }}</span>
         </template>
       </template>
       <template v-if="post.timeToRead">
