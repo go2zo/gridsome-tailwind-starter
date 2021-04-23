@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Section container="md" dots>
-      <div class="text-center post-header mb-x2">
+      <div class="post-header mb-x2 text-center">
         <h1 v-html="$page.post.title" />
         <PostMeta :post="$page.post" />
       </div>
