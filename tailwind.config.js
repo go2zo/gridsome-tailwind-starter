@@ -119,7 +119,6 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-text-indent')(),
-    require('tailwindcss-pseudo-elements')(),
     require('./plugins/decoration-color'),
     require('./plugins/font-variant'),
     require('./plugins/word-spacing'),
