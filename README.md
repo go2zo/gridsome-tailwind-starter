@@ -12,8 +12,9 @@ npm install --global @gridsome/cli
 
 1. `gridsome create my-gridsome-site go2zo/gridsome-tailwind-starter` to install this starter
 2. `cd my-gridsome-site` to open the folder
-3. `yarn develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+3. `yarn prepare` to install husky
+4. `yarn develop` to start a local dev server at `http://localhost:8080`
+5. Happy coding 🎉🙌
 
 ## References
 
