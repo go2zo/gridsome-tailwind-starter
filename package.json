@@ -60,11 +60,7 @@
     "webpack-node-externals": "^2.5.2"
   },
   "lint-staged": {
-    "*.{js,vue}": [
-      "eslint . --fix",
-      "git add"
-    ],
-    "*.js": "eslint --cache --fix",
+    "*.{js,vue}": "eslint --cache --fix",
     "*.css": "stylelint --fix"
   }
 }
