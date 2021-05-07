@@ -7,5 +7,4 @@ dist
 .env
 .env.*
 
-content/
 .eslintcache
